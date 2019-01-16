@@ -13,6 +13,10 @@ public class TestTracker {
 	}
 	
 	
-	
+	@Test
+	public void removecombatant() {
+		
+		
+	}
 
 }

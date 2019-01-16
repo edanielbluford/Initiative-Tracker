@@ -26,7 +26,7 @@ public class CharacterTest {
 	@Test
 	public void testName(){
 		
-		Character character = new Character("Foo",20,"None",0);
+		Character character = new Character("Foo",20,"None",0,false);
 		
 		assertEquals("Foo",character.getName());
 
@@ -35,7 +35,7 @@ public class CharacterTest {
 	@Test
 	public void testHP(){
 		
-		Character character = new Character("Foo",20,"None",0);
+		Character character = new Character("Foo",20,"None",0,false);
 		
 		assertEquals(20,character.getHitPoints());
 
@@ -43,7 +43,7 @@ public class CharacterTest {
 	@Test
 	public void testStatus(){
 		
-		Character character = new Character("Foo",20,"None",0);
+		Character character = new Character("Foo",20,"None",0, false);
 		
 		assertEquals("None",character.getStatus());
 
@@ -52,7 +52,7 @@ public class CharacterTest {
 	@Test
 	public void testChangeHP() {
 		
-		Character character = new Character("Foo",20,"None",0);
+		Character character = new Character("Foo",20,"None",0,false);
 		
 		assertEquals(15,character.changeHP(15));
 	}
@@ -61,7 +61,7 @@ public class CharacterTest {
 	@Test
 	public void testApplyStatus() {
 		
-	Character character = new Character("Foo",20,"None",0);
+	Character character = new Character("Foo",20,"None",0, false);
 		
 	assertEquals("Poison", character.applyStatus("Poison"));
 		

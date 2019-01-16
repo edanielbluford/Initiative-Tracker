@@ -6,6 +6,7 @@ public class Character {
 	private int hitPoints;
 	private String status;
 	private int initMod;
+	private boolean isNPC;
 	
 	
 	public String getName() { return name; }
@@ -21,33 +22,38 @@ public class Character {
 	      { this.initMod=initMod; }
 	   
 	   public String getStatus() { return status; }
-	   public void seStatus(String status)
+	   public void setStatus(String status)
 	      { this.status=status; }
 	   
+	   public boolean getIsNPC() { return isNPC; }
+	   public void setIsNPC(boolean isNPC)
+	      { this.isNPC=isNPC; }
+	   
+	   //Default Constructor
 	   public Character() {
 		   
 		   
 	   }
-	
-	   public Character(String characterName, int cHitPoints, String characterStatus, int characterInit) {
+	   
+	//Loaded Constructor
+	   public Character(String characterName, int cHitPoints, String characterStatus, int characterInit, boolean noPC) {
 			
 		   this.name =characterName; 
 			this.hitPoints=cHitPoints;
 			this.status =characterStatus;
 			this.initMod = characterInit;
+			this.isNPC = noPC;
 			
 		}
 	
-	   
+	  //Changes the Character's HP
 	   public int changeHP(int damage) {
-		   
-		   
-		   
 		   hitPoints = damage;
-		   return hitPoints;
+		   return this.hitPoints;
 		   
 	   }
 	   
+	   //Changes character's status.
 	   public String applyStatus(String newStatus) {
 		 
 		   status = newStatus;
